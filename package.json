@@ -1,0 +1,44 @@
+{
+  "devDependencies": {
+    "prettier-plugin-prisma": "^2.28.0",
+    "prisma": "^2.23.0",
+    "ts-node-dev": "^1.1.6",
+    "typescript": "^4.2.4"
+  },
+  "name": "prisma2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "ts-node-dev --no-notify --respawn --transpile-only api/index.ts",
+    "build": "tsc",
+    "generate": "ts-node --transpile-only api/schema",
+    "test": "npm run generate && jest"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "globals": {
+      "ts-jest": {
+        "diagnostics": {
+          "warnOnly": true
+        }
+      }
+    },
+    "testEnvironment": "node"
+  },
+  "dependencies": {
+    "@prisma/client": "^2.23.0",
+    "@types/jest": "^26.0.23",
+    "apollo-server": "^2.24.1",
+    "bcryptjs": "^2.4.3",
+    "get-port": "^5.1.1",
+    "graphql": "^15.5.0",
+    "graphql-middleware": "^6.0.10",
+    "graphql-request": "^3.4.0",
+    "graphql-shield": "^7.5.0",
+    "jsonwebtoken": "^8.5.1",
+    "nexus": "^1.0.0",
+    "nexus-prisma": "^0.27.0",
+    "ts-jest": "^26.5.6"
+  }
+}
